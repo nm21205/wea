@@ -28,7 +28,7 @@ const Ads = () => {
             <ins className="adsbygoogle"
                 style={{ display: 'block' }}
                 data-ad-client="ca-pub-9677892204769800"
-                data-ad-slot="YOUR_ACTUAL_AD_SLOT_ID" // 여기에 실제 광고 슬롯 ID를 입력하세요.
+                data-ad-slot="4693054575" // 여기에 실제 광고 슬롯 ID를 입력하세요.
                 data-ad-format="auto"></ins>
         </div>
     );
