@@ -3,26 +3,28 @@ import { Helmet } from 'react-helmet';
 
 const Ads = () => {
     useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9677892204769800';
-        script.async = true;
-        script.crossOrigin = 'anonymous';
-        document.body.appendChild(script);
+        const handleAds = () => {
+            if (window.adsbygoogle) {
+                window.adsbygoogle.push({});
+            }
+        };
+
+        // 스크립트가 로드된 후에 handleAds를 호출합니다.
+        if (window.adsbygoogle) {
+            handleAds();
+        } else {
+            window.addEventListener('load', handleAds);
+        }
 
         return () => {
-            document.body.removeChild(script);
+            window.removeEventListener('load', handleAds);
         };
-    }, []);
-
-    useEffect(() => {
-        if (window.adsbygoogle && window.adsbygoogle.loaded) {
-            window.adsbygoogle.push({});
-        }
     }, []);
 
     return (
         <div>
             <Helmet>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9677892204769800" crossOrigin="anonymous"></script>
                 <meta name="google-adsense-account" content="ca-pub-9677892204769800" />
             </Helmet>
             <ins className="adsbygoogle"
