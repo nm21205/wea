@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { WiDaySunny } from 'react-icons/wi'; // 날씨 관련 아이콘 import
 import styled from 'styled-components';
 
-import Ads from '../components/Ads';
+
 
 const DoorContainer = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ const Door = () => {
         <Icon />
         <h1>Local weather info</h1> {/* 제목 변경 */}
       </DoorContainer>
-      <Ads />
+
     </>
   );
 };

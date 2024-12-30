@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import Ads from '../components/Ads';
+import HE from '../components/HE.jsx';
 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -75,7 +75,7 @@ const Homepage = () => {
         </div>
       )}
       <div>
-        <Ads />
+        <HE />  
       </div>
     </div>
   );
